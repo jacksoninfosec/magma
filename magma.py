@@ -98,7 +98,7 @@ def magma_decrypt(x, k):
 	return join(L ^ g(R, keys[-1]), R)
 
 
-k = int(' ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff', 16)
+k = int('ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff', 16)
 PT = int('fedcba9876543210', 16)
 CT = magma_encrypt(PT, k)
 print(hex(CT))
