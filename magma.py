@@ -98,9 +98,9 @@ def magma_decrypt(x, k):
 	return join(L ^ g(R, keys[-1]), R)
 
 
-k = int('ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff', 16)
-PT = int('fedcba9876543210', 16)
-CT = magma_encrypt(PT, k)
+k = int('ffeeddccbbaa99887766554433221100f0f1f2f3f4f5f6f7f8f9fafbfcfdfeff', 16)   # the key
+PT = int('fedcba9876543210', 16)   # the plaintext
+CT = magma_encrypt(PT, k)   # the ciphertext
 print(hex(CT))
-DT = magma_decrypt(CT, k)
-print(DT == PT)
+DT = magma_decrypt(CT, k)   # the decrypted text
+print(DT == PT)  # the decrypted text should equal the original plaintext
