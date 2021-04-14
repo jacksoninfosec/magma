@@ -86,9 +86,9 @@ def magma_encrypt(x, k):
 	return join(L ^ g(R, keys[-1]), R)
 
 
-# The input value x (the plaintext) is 64 bits.
+# The input value x (the ciphertext) is 64 bits.
 # k is 256 bits
-# The return value (the ciphertext) is 64-bits
+# The return value (the plaintext) is 64-bits
 def magma_decrypt(x, k):
 	keys = magma_key_schedule(k)
 	keys.reverse()
